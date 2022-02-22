@@ -2,7 +2,7 @@ from html.parser import HTMLParser
 from bs4 import BeautifulSoup
 import requests
 
-headers = {'User-Agent': """ input user agent here """}
+headers = {'User-Agent': """ insert user agent here """}
 
 # returns a dictionary of vegware product categories as keys and
 #   their href urls as values
