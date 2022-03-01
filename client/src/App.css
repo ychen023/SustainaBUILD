@@ -15,6 +15,15 @@ main {
 
 }
 
+footer {
+  display: inline-block;
+  text-align: center;
+  background-color: #cce0d4;
+  padding: 1em;
+  width: 100%;
+
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -22,8 +31,8 @@ main {
 }
 
 .background-format {
-  margin: 2em;
   width: 100%;
+  margin-top: 1em;
 
 }
 
@@ -134,6 +143,7 @@ main {
   background-color: #F9F5ED;
   padding: 2em;
   text-align: left;
+  margin-bottom: 3em;
 
 }
 
@@ -145,5 +155,31 @@ main {
 
 .regulations-subheading-formatting {
   margin-top: 2em;
+
+}
+
+.navbar-format {
+  background-color: #62938D;
+  padding-left: 1em;
+
+}
+
+.nav-format {
+  padding-top: 2.7em;
+  width:50%;
+
+}
+
+.push-right {
+  padding-right: 1.5em;
+}
+
+
+.nav-tabs {
+  display: inline;
+  font-size: 21px;
+  color: lightgray;
+  /* padding-top: 1.8em; */
+  padding-left: 2.5em;
 
 }

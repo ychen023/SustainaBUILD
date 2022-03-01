@@ -1,5 +1,7 @@
 import './App.css';
 import { Dashboard } from './Components/Dashboard';
+import { Footer } from './Components/Footer';
+import { NavB } from './Components/NavB';
 import product_data from './data/vegware.json';
 
 // https://bestofreactjs.com/repo/YIZHUANG-react-multi-carousel-react-image-gallery
@@ -24,7 +26,11 @@ const responsive = {
 
 function App() {
   return (
-    <Dashboard product_data={product_data} responsive={responsive}/>
+    <div>
+      <NavB />
+      <Dashboard product_data={product_data} responsive={responsive}/>
+      <Footer />
+    </div>
   )
 }
 
