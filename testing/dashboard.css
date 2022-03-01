@@ -5,6 +5,7 @@
 
 }
 
+
 body {
   margin: 0;
   background-color: #e6ede6;
@@ -48,7 +49,6 @@ main {
 
 .section-heading-container > h2 {
   font-weight: normal;
-  font-size: 16px;
 
 }
 
@@ -57,34 +57,29 @@ main {
 }
 
 .recommended-cat-heading {
+  border: 1px solid #B9B9B9;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   text-align: left;
   line-height: 0;
 
 }
 
-.recommended-cat-heading-border {
-  border: 1px solid #B9B9B9;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-}
-
 .cat-heading-formatting {
   font-size: 18px;
-  
 }
 
 .carousel-container {
+  display: flex;
+  column-gap: 3em;
+  flex-grow: 1;
+  flex-basis: 0;
   padding: 1em;
   padding-top: 2em;
-  padding-left: 0;
+  /* justify-content: center; */
+  /* justify-content: space-evenly; */
   margin-bottom: .5em; /* spacing between each carousel row */
-
-}
-
-.prod-class {
-  padding-left: 2em;
-  padding-right: 2em;
 
 }
 
@@ -92,6 +87,7 @@ main {
   background-color: white;
   border-radius: 7px;
   overflow: hidden;
+  flex-basis: auto;
   width: 100%;
   /* might have to find a better way to set the widths the same for each box */
   align-self: stretch;
@@ -103,28 +99,34 @@ main {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   object-fit: cover;
-
 }
 
 .price-formatting {
   margin-top: 0;
   margin-bottom: 0;
-  padding: .5em;
-  font-size: 12px;
 
 }
 
 .product-descr, .product-descr > p > strong {
-  font-size: 12.5px;
+  font-size: 12px;
 }
 
-/* styling for the reyclable/biodegradable tag */
-.product-descr > p > i {
+.product-descr, .product-descr > p > i {
   font-size: 10px;
 }
 
+.product-descr > p, .price-container > p {
+  padding: .5em;
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .one-breakdown {
-  margin-top: 2.75em;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  margin-left: -25px;
   /* cheating to push the recyclable label down 
   for prods with only 1 price breakdown ^ */
 
