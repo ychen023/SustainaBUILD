@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 15px;
+  
+  }
+  
+  body {
+    margin: 0;
+    background-color: #e6ede6;
+  }
+  
+  main {
+    flex: 1;
+  
+  }
+  
+  footer {
+    display: inline-block;
+    text-align: center;
+    background-color: #cce0d4;
+    padding: 1em;
+    width: 100%;
+  
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+  
+  .submit {
+    background-color: #62938D;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .quiz {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      background-color: #F9F5ED;
+      margin-left: 12.5%;
+      margin-right: 12.5%;
+      margin-top: 2.5%;
+      width: 75%;
+  }
+  .HeaderMessage {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: #62938D;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 2.5%;
+    width: 75%;
+  }
+  .item-list {
+      overflow-y: auto;
+      background-color: #fff;
+      height: 200px;
+      width: 100px;
+      text-align: left;
+  }
+
+  .background-format {
+    width: 100%;
+    margin-top: 1em;
+  
+  }
+  
+  /* limited to 1 per col */
+  .dashboard-section {
+    padding: 1em;
+    text-align: center;
+    padding-bottom: 0;
+  
+  }
+  
+  .section-heading-container {
+    background-color: #a7c9bb;
+    display: inline-block;
+    text-align: center;
+    /* padding: .5em; */
+    width: fit-content;
+    padding-left: 5em;
+    padding-right: 5em;
+  
+  }
+  
+  .section-heading-container > h2 {
+    font-weight: normal;
+    font-size: 16px;
+  
+  }
+  
+  .section-body-container {
+    padding: .25em;
+  }
+  
+  .recommended-cat-heading {
+    text-align: left;
+    line-height: 0;
+  
+  }
+  
+  .recommended-cat-heading-border {
+    border: 1px solid #B9B9B9;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+  
+  .cat-heading-formatting {
+    font-size: 18px;
+    
+  }
+  
+  .carousel-container {
+    padding: 1em;
+    padding-top: 2em;
+    padding-left: 0;
+    margin-bottom: .5em; /* spacing between each carousel row */
+  
+  }
+  
+  .prod-class {
+    padding-left: 2em;
+    padding-right: 2em;
+  
+  }
+  
+  .product-container {
+    background-color: white;
+    border-radius: 7px;
+    overflow: hidden;
+    width: 100%;
+    /* might have to find a better way to set the widths the same for each box */
+    align-self: stretch;
+    position: relative;
+  
+  }
+  
+  .image-formatting {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    object-fit: cover;
+  
+  }
+  
+  .price-formatting {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: .5em;
+    font-size: 12px;
+  
+  }
+  
+  .product-descr, .product-descr > p > strong {
+    font-size: 12.5px;
+  }
+  
+  /* styling for the reyclable/biodegradable tag */
+  .product-descr > p > i {
+    font-size: 10px;
+  }
+  
+  .one-breakdown {
+    margin-top: 2.75em;
+    /* cheating to push the recyclable label down 
+    for prods with only 1 price breakdown ^ */
+  
+  }
+  
+  .regulations-container {
+    background-color: #F9F5ED;
+    padding: 2em;
+    text-align: left;
+    margin-bottom: 3em;
+  
+  }
+  
+  /* to stick the text box directly to the heading element */
+  .regulations-container > p {
+    margin-top: 0;
+  
+  }
+  
+  .regulations-subheading-formatting {
+    margin-top: 2em;
+  
+  }
+  
+  .navbar-format {
+    background-color: #62938D;
+    padding-left: 1em;
+  
+  }
+  
+  .nav-format {
+    padding-top: 2.7em;
+    width:50%;
+  
+  }
+  
+  .push-right {
+    padding-right: 1.5em;
+  }
+  
+  
+  .nav-tabs {
+    display: inline;
+    font-size: 21px;
+    color: lightgray;
+    /* padding-top: 1.8em; */
+    padding-left: 2.5em;
+  
+  }
