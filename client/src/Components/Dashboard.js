@@ -96,6 +96,16 @@ function Recommendations(props) {
 
             }
 
+            let stock_class;
+
+            if (curr_prod_info["stock_status"] === "In stock") {
+              stock_class = "in-stock"
+
+            } else {
+              stock_class = "out-of-stock"
+
+            }
+
             final_element = (
               <div className="product-container" key={curr_prod_name}>
                 <a href={curr_prod_info["url"]} target="_blank" rel="noreferrer">
@@ -104,6 +114,7 @@ function Recommendations(props) {
                 <div className="product-descr">
                   <p><strong>{curr_prod_name}</strong></p>
                   {price_breakdown_elements}
+                  <p className={stock_class}>{curr_prod_info["stock_status"]}</p>
                   {format_tag}
                 </div>
               </div>

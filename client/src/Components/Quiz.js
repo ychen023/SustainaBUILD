@@ -1,19 +1,22 @@
 import React, {useState} from 'react';
+import { useNavigate } from "react-router-dom";
 let CONTAINER_LIST = ["neveer", "gonna", "let", "yyou", "down", "neverr", "going to", "give", "yoou", "up", "neever-", "gonnna", "mess", "around", "and", "dessert", "youu"];
 
 // data obj [{question: "text", type"mChoice", answers: [x, y, y]}]
 // or in the case of the multi {question: "text", type:"multi", answers:{selector1:[], selector2[]}}
 
-function onSubmit(e, data, pageCount, updatePageCount, done) {
-    e.preventDefault();
-    if(!done) {
-        let newCount = pageCount + 1;
-        console.log("next " + data + " " + newCount);
-        updatePageCount(newCount);
-    }else {
-        console.log(data);
-    }
-}
+// function onSubmit(e, data, pageCount, updatePageCount, done) {
+//     e.preventDefault();
+//     if(!done) {
+//         let newCount = pageCount + 1;
+//         console.log("next " + data + " " + newCount);
+//         updatePageCount(newCount);
+//     }else {
+//         let navigate = useNavigate();
+//         navigate("/dashboard");
+//         console.log(data);
+//     }
+// }
 
 export default function Quiz({dataList, headerMessage}) {
     let [collectedData, updateData] = useState({multi:[]});
@@ -35,6 +38,7 @@ export default function Quiz({dataList, headerMessage}) {
     let questions = data.map((question) => {
         return (<QuizQuestion questionData={question} data={collectedData} updateData={updateData} key={question.question}/>);
     })
+    let navigate = useNavigate();
     return (
         <div className='quizPage'>
             <div className='HeaderMessage'>
@@ -43,7 +47,15 @@ export default function Quiz({dataList, headerMessage}) {
                 </p>
             </div>
             <div className='quiz'>
-                <form onSubmit={(event) => onSubmit(event, collectedData, pageCount, updatePageCount, last)}>
+                <form onSubmit={(event) => {    event.preventDefault();
+                if(!last) {
+                    let newCount = pageCount + 1;
+                    console.log("next " + collectedData + " " + newCount);
+                    updatePageCount(newCount);
+                }else {
+                    navigate("/dashboard");
+                    console.log(collectedData);
+                }}}>
                     {questions}
                     <button className='submit'>{last ? "Submit" : "Next"}</button>
                 </form>

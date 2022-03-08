@@ -144,8 +144,18 @@ footer {
 
 }
 
-.product-descr, .product-descr > p > strong {
+.product-descr, .product-descr > p > strong, .in-stock, .out-of-stock {
   font-size: 12.5px;
+}
+
+.in-stock {
+  color: green;
+
+}
+
+.out-of-stock {
+  color: darkred;
+
 }
 
 /* styling for the reyclable/biodegradable tag */

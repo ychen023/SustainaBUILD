@@ -2,7 +2,9 @@ import './App.css';
 import { Dashboard } from './Components/Dashboard';
 import { Footer } from './Components/Footer';
 import { NavB } from './Components/NavB';
+import Quiz from './Components/Quiz';
 import product_data from './data/vegware.json';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // https://bestofreactjs.com/repo/YIZHUANG-react-multi-carousel-react-image-gallery
 const responsive = {
@@ -31,11 +33,15 @@ let headerMessage = ["We want to get to know your business", "Great! Just dive a
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <NavB />
-      <Dashboard product_data={product_data} responsive={responsive}/>
+      <Routes> 
+        <Route exact path = "/" element={<Quiz dataList={testData} headerMessage={headerMessage}/>}></Route>
+        <Route path="/dashboard" element={<Dashboard product_data={product_data} responsive={responsive}/>} />
+
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   )
 }
 
